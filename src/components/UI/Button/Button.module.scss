@@ -1,0 +1,14 @@
+@import "../../../styles/vars.scss";
+
+.button {
+  border: none;
+  outline: none;
+
+  padding: 8px 12px;
+  color: $lightTextColor;
+  background: $accent;
+
+  border-radius: $buttonBorderRadius;
+
+  cursor: pointer;
+}

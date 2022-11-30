@@ -1,0 +1,47 @@
+@import "../../../styles/vars.scss";
+
+.select {
+  position: relative;
+  padding: 5px;
+}
+
+.select.background {
+  border-radius: $buttonBorderRadius;
+  background: $accent;
+  color: $lightTextColor;
+}
+
+.select.underline::before {
+  content: "";
+  width: 0;
+  height: 3px;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+
+  border-radius: $buttonBorderRadius;
+  background: $accent;
+
+  animation: rotate 4s ease-out infinite;
+}
+
+@keyframes rotate {
+  0%,
+  100% {
+    left: 0;
+    width: 0;
+  }
+  25% {
+    left: 0;
+    width: 100%;
+  }
+  50% {
+    left: 100%;
+    width: 0;
+  }
+  75% {
+    left: 0;
+    width: 100%;
+  }
+}

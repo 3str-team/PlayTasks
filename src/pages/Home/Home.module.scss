@@ -1,0 +1,40 @@
+@import "../../styles/vars.scss";
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+
+  .introduction {
+    width: 100%;
+    min-height: 500px;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+
+    background: $bgColor;
+    border-bottom: 1px solid black;
+
+    .introductionText {
+      text-align: center;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .aboutText {
+    max-width: 600px;
+  }
+}

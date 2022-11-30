@@ -1,0 +1,22 @@
+@import "./Header.scss";
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: $bgColor;
+
+  .header,
+  .footer {
+    flex: 0 0 auto;
+  }
+
+  .content {
+    position: relative;
+
+    flex: 1 0 auto;
+  }
+}
