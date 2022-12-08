@@ -17,10 +17,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // flex-wrap: wrap;
     gap: 50px;
 
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 }
 
@@ -29,8 +28,6 @@
     .content {
       flex-direction: column;
       justify-content: center;
-
-      line-height: 1.8rem;
     }
   }
 }
