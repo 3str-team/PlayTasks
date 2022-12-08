@@ -3,7 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Section from "../../components/Section/Section";
 import Button from "../../components/UI/Button/Button";
 import Select from "../../components/UI/Select/Select";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
+import { Link, Element } from "react-scroll";
 
 import home from "./Home.module.scss";
 
@@ -48,7 +48,6 @@ const Home = () => {
             minHeight: 200,
             borderRadius: 10,
             backgroundColor: "black",
-            justifySelf: "center",
           }}
         ></div>
       </Section>
