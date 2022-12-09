@@ -39,7 +39,7 @@ const TasksPage = () => {
           <input
             type="text"
             className={tasks.searchField}
-            placeholder="Введите номер или тему задачи"
+            placeholder="Введите номер, тему или название задачи"
             onInput={(e) => sortTasks(e.target.value)}
           />
         </div>

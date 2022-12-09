@@ -17,4 +17,10 @@ export const tasks = [
     theme: "Переливания",
     title: "Задача 3",
   },
+  {
+    id: 4,
+    taskId: 4,
+    theme: "Взвешивания",
+    title: "Задача 4",
+  },
 ];

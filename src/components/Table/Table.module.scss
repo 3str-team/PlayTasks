@@ -2,11 +2,10 @@
 
 .table {
   width: 100%;
-  min-width: 570px;
 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 
   .headRow,
   .row {
@@ -25,6 +24,32 @@
 
       border: 1px solid $accent;
       border-radius: 5px;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: $accent;
+
+    box-shadow: 0 0 30px rgba($color: $accent, $alpha: 0.15);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    .cell {
+      padding: 20px;
+    }
+
+    .cell:nth-child(1) {
+      background: $accent;
+      color: $lightTextColor;
+      width: 100%;
+      text-align: center;
     }
   }
 

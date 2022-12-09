@@ -46,7 +46,7 @@
   .navigate {
     display: flex;
     align-items: center;
-    ul {
+    .list {
       display: flex;
       gap: 15px;
       list-style: none;
@@ -79,6 +79,10 @@
       }
     }
   }
+
+  .burger {
+    display: none;
+  }
 }
 
 @keyframes rotate {
@@ -98,5 +102,72 @@
   75% {
     left: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    .navigate {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 400px;
+
+      align-items: center;
+      justify-content: center;
+
+      background: $bgColor;
+      box-shadow: 0 -5px 20px rgba($color: $accent, $alpha: 0.2);
+
+      z-index: 10;
+      top: 0;
+      right: calc(-100% - 70px);
+
+      transition: right 0.4s;
+
+      .list {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+      }
+    }
+    .navigate.active {
+      right: 0;
+    }
+
+    .burger {
+      display: block;
+      position: relative;
+      width: 45px;
+      height: 45px;
+      // outline: 1px solid black;
+      outline: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .burger::before,
+    .burger::after {
+      content: "";
+      position: absolute;
+
+      height: 2px;
+      width: 35px;
+
+      background: $accent;
+      border-radius: 5px;
+
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .burger::before {
+      top: 15px;
+    }
+
+    .burger::after {
+      bottom: 15px;
+    }
   }
 }
