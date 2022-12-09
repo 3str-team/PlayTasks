@@ -1,20 +1,22 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
-import Home from "./pages/Home/Home";
+import HomePage from "./pages/Home/HomePage";
+import TasksPage from "./pages/Tasks/TasksPage";
 
 import "./styles/app.scss";
 
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tasks" element={<TasksPage />} />
           </Routes>
-        </BrowserRouter>
-      </Layout>
+        </Layout>
+      </BrowserRouter>
     </div>
   );
 }

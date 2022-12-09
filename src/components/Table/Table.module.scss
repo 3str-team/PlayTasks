@@ -1,0 +1,41 @@
+@import "../../styles/vars.scss";
+
+.table {
+  width: 100%;
+  min-width: 570px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .headRow,
+  .row {
+    position: relative;
+    display: flex;
+    gap: 10px;
+
+    text-decoration: none;
+    color: $textColor;
+
+    .headCell,
+    .cell {
+      flex: 1;
+      text-align: center;
+      padding: 15px;
+
+      border: 1px solid $accent;
+      border-radius: 5px;
+    }
+  }
+
+  .headCell {
+    background: $accent;
+    color: $lightTextColor;
+  }
+  .row:hover {
+    cursor: pointer;
+    .cell {
+      background: lightgray;
+    }
+  }
+}

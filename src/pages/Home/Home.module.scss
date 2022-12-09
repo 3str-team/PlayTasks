@@ -35,10 +35,12 @@
     }
   }
 
-  .aboutText {
-    max-width: 600px;
+  .about {
+    position: relative;
+    .aboutText {
+      max-width: 600px;
+    }
   }
-
   .competitors {
     div {
       min-width: 200px;

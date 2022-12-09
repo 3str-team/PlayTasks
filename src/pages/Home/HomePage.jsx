@@ -7,10 +7,8 @@ import { Link, Element } from "react-scroll";
 
 import home from "./Home.module.scss";
 
-const Home = () => {
+const HomePage = () => {
   const UNFULL_SECTION_CLASS = "unfullSection";
-
-  // const scrollToTextSection = () => {};
 
   return (
     <div className={"wrapper " + home.homePage} id="wrap">
@@ -24,19 +22,22 @@ const Home = () => {
         <Link
           to="text_section"
           smooth={"easeInOut"}
-          duration={1000}
+          duration={800}
           containerId="wrap"
         >
           <Button value={"Поехали!"} style={{ fontSize: "1.1rem" }} />
         </Link>
       </section>
-      <Element name="text_section"></Element>
       <Section
         title={"О проекте"}
         classes={[home.about, UNFULL_SECTION_CLASS]}
         variant="twice"
       >
         <div className={home.aboutText}>
+          <Element
+            name="text_section"
+            style={{ position: "absolute", top: 0 }}
+          ></Element>
           Наш проект нацелен на создание{" "}
           <Select variant="underline">сборника</Select> задач для учеников 5-7
           классов. Мы хотим пополнить арсенал преподавателей простым для
@@ -48,6 +49,7 @@ const Home = () => {
             minHeight: 200,
             borderRadius: 10,
             backgroundColor: "black",
+            boxShadow: "0 0 100px 3px rgba(0, 0, 0, 0.5)",
           }}
         ></div>
       </Section>
@@ -83,4 +85,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
