@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import Button from "../../components/UI/Button/Button";
 
 import { tasks as tasksData } from "../../data/tasks";
@@ -21,6 +22,8 @@ const TaskPage = () => {
         <div className={taskStyles.title}>{task.title}</div>
         <div className={taskStyles.text}>{task.text}</div>
       </section>
+
+      <Footer />
     </div>
   );
 };
