@@ -14,7 +14,7 @@ const Table = ({ data }) => {
 
       {data.map(({ id, taskId, theme, title }) => {
         return (
-          <Link key={id} className={styles.row} to={"/tasks/" + taskId}>
+          <Link key={id} className={styles.row} to={"" + taskId}>
             <div className={styles.cell}>{taskId}</div>
             <div className={styles.cell}>{theme}</div>
             <div className={styles.cell}>{title}</div>

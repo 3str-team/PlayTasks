@@ -25,12 +25,12 @@ const Header = () => {
       >
         <ul className="list">
           <li>
-            <NavLink className="link" to={"/"} activeclassname="active">
+            <NavLink className="link" to={""} activeclassname="active">
               Главная
             </NavLink>
           </li>
           <li>
-            <NavLink className="link" to={"/tasks"} activeclassname="active">
+            <NavLink className="link" to={"tasks"} activeclassname="active">
               Задачи
             </NavLink>
           </li>
