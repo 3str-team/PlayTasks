@@ -1,10 +1,10 @@
-import React from "react";
-
-import tasks from "./Tasks.module.scss";
+import React, { useState } from "react";
+import Table from "../../components/Table/Table";
+import Footer from "../../components/Footer/Footer";
 
 import { tasks as tasksData } from "../../data/tasks";
-import Table from "../../components/Table/Table";
-import { useState } from "react";
+
+import tasks from "./Tasks.module.scss";
 
 const TasksPage = () => {
   const [tasksList, setTasksList] = useState(tasksData);
@@ -45,6 +45,8 @@ const TasksPage = () => {
         </div>
         <Table data={tasksList} />
       </section>
+
+      <Footer />
     </div>
   );
 };

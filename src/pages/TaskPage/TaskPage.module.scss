@@ -1,0 +1,27 @@
+@import "../../styles/vars.scss";
+
+.taskPage {
+  padding: $sectionPadding;
+
+  .controlls {
+    padding-bottom: 50px;
+  }
+
+  .section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .title {
+      font-size: 25px;
+    }
+
+    .text {
+      line-height: 2em;
+    }
+  }
+}
