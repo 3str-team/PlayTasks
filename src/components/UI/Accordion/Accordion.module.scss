@@ -1,0 +1,15 @@
+@import "../../../styles/vars.scss";
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  .content {
+    position: relative;
+    border-left: 2px solid $accent;
+    padding-left: 10px;
+    overflow: hidden;
+  }
+}
