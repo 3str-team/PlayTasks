@@ -84,5 +84,11 @@
         text-align: center;
       }
     }
+
+    .row:hover {
+      .cell {
+        background-color: transparent;
+      }
+    }
   }
 }
