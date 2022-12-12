@@ -1,0 +1,22 @@
+@import "../../../styles/vars.scss";
+
+.loader {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: $accent;
+  border-bottom-color: $accent;
+
+  animation: loading 0.8s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

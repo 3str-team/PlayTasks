@@ -89,7 +89,9 @@
       .cell {
         background-color: transparent;
       }
+      .cell:nth-child(1) {
+        background: $accent;
+      }
     }
   }
 }
-

@@ -8,8 +8,6 @@ const Accordion = ({ titleDefault, titleHidden = titleDefault, children }) => {
     buttonValue: titleDefault,
   });
 
-  console.log(isShowAnswer);
-
   const toggleShowAnswer = () => {
     setIsShowAnswer({
       flag: !isShowAnswer.flag,
