@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const useFetch = (url) => {
   const [response, setResponse] = useState(null);
@@ -12,16 +12,12 @@ export const useFetch = (url) => {
     xhr.send();
 
     xhr.onload = () => {
-      // setTimeout(() => {
       setResponse(JSON.parse(xhr.response));
       setIsLoading(false);
-      // }, 1000);
     };
   };
 
-  useEffect(() => {
-    getTasksData();
-  }, []);
+  getTasksData();
 
   return [response, isLoading];
 };
