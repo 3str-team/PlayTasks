@@ -9,6 +9,7 @@ export const useFetch = (url) => {
       const xhr = new XMLHttpRequest();
 
       xhr.open("GET", url);
+      xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
       xhr.send();
 
