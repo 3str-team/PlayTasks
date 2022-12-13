@@ -1,4 +1,4 @@
 export const server = {
   // URL: "http://localhost:7000",
-    URL: "https://play-tasks-server.onrender.com",
+  URL: "http://85.119.145.221:7000",
 };
