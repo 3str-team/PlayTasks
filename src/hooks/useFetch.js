@@ -1,22 +1,21 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const useFetch = (url) => {
   const [response, setResponse] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const getTasksData = () => {
-      const xhr = new XMLHttpRequest();
+    const getTasksData = async () => {
+      const resp = await axios({
+        url,
+        method: "GET",
+      });
 
-      xhr.open("GET", url);
-      xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+      console.log(resp.data);
 
-      xhr.send();
-
-      xhr.onload = () => {
-        setResponse(JSON.parse(xhr.response));
-        setIsLoading(false);
-      };
+      setResponse(resp.data);
+      setIsLoading(false);
     };
 
     getTasksData();
