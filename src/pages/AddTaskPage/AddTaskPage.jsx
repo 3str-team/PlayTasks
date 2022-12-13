@@ -17,8 +17,10 @@ const AddTaskPage = () => {
     ...defaultData,
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const submit = () => {
+    setIsLoading(true);
     const url = `${server.URL}/api/tasks/add`;
 
     const xhr = new XMLHttpRequest();
@@ -33,6 +35,7 @@ const AddTaskPage = () => {
         ...defaultData,
         password: data.password,
       });
+      setIsLoading(false);
     };
   };
 
@@ -73,9 +76,13 @@ const AddTaskPage = () => {
             onInput={(e) => setData({ ...data, answer: e.target.value })}
           ></textarea>
           <Button
-            style={{ maxWidth: 100 }}
+            style={{ maxWidth: 100, opacity: isLoading ? 0.5 : 1 }}
             value="Отправить"
-            onClick={submit}
+            onClick={
+              isLoading
+                ? () => console.log("Задача отправляется. Подождите")
+                : submit
+            }
           />
         </div>
       </section>
