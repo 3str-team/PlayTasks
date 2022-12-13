@@ -10,6 +10,9 @@ export const useFetch = (url) => {
       const resp = await axios({
         url,
         method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
 
       console.log(resp.data);
