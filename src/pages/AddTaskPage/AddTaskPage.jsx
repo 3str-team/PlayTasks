@@ -5,12 +5,16 @@ import { server } from "../../consts/server";
 
 import add from "./AddTaskPage.module.scss";
 
+const defaultData = {
+  theme: "",
+  title: "",
+  text: "",
+  answer: "",
+};
+
 const AddTaskPage = () => {
   const [data, setData] = useState({
-    theme: "",
-    title: "",
-    text: "",
-    answer: "",
+    ...defaultData,
     password: "",
   });
 
@@ -25,6 +29,10 @@ const AddTaskPage = () => {
 
     xhr.onload = () => {
       console.log(xhr.response);
+      setData({
+        ...defaultData,
+        password: data.password,
+      });
     };
   };
 
@@ -39,23 +47,27 @@ const AddTaskPage = () => {
             onInput={(e) => setData({ ...data, password: e.target.value })}
           />
           <input
+            value={data.theme}
             className={add.input}
             type="text"
             placeholder="Категория"
             onInput={(e) => setData({ ...data, theme: e.target.value })}
           />
           <input
+            value={data.title}
             className={add.input}
             type="text"
             placeholder="Название задачи"
             onInput={(e) => setData({ ...data, title: e.target.value })}
           />
           <textarea
+            value={data.text}
             className={add.input}
             placeholder="Текст задачи"
             onInput={(e) => setData({ ...data, text: e.target.value })}
           ></textarea>
           <textarea
+            value={data.answer}
             className={add.input}
             placeholder="Ответ"
             onInput={(e) => setData({ ...data, answer: e.target.value })}
