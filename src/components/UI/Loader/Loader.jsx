@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import styles from "./Loader.module.scss";
 
-const Loader = ({ isLoading }) => {
+const Loader = ({ isLoading, ...props }) => {
   const [isShow, setIsShow] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,9 @@ const Loader = ({ isLoading }) => {
     }
   }, [isLoading]);
 
-  return <>{isShow ? <div className={styles.loader}></div> : <></>}</>;
+  return (
+    <>{isShow ? <div className={styles.loader} {...props}></div> : <></>}</>
+  );
 };
 
 export default Loader;

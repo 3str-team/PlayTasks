@@ -1,0 +1,29 @@
+@import "../../styles/vars.scss";
+
+.addPage {
+  padding: $sectionPadding;
+  .section {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .input {
+      padding: 10px;
+      outline: none;
+      border: 1px solid $accent;
+
+      border-radius: 5px;
+    }
+
+    textarea.input {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+    }
+  }
+}
