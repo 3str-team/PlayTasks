@@ -9,12 +9,11 @@ import tasks from "./Tasks.module.scss";
 import { server } from "../../consts/server";
 
 const TasksPage = () => {
-  console.log("render Tasks Page");
+  console.log("render Tasks Page", server.URL);
   const url = `${server.URL}/api/tasks/getAll`;
   const [tasksData, isLoading] = useFetch(url);
   const [tasksList, setTasksList] = useState([]);
   const searchInput = useRef();
-  console.log(searchInput.current);
 
   useEffect(() => {
     if (!isLoading) {
