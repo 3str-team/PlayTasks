@@ -7,11 +7,13 @@ export const useFetch = (url) => {
 
   useEffect(() => {
     const getTasksData = async () => {
+      console.log(document.referrer, "edwefw");
       const resp = await axios({
         url,
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          Origin: "*",
         },
       });
 
